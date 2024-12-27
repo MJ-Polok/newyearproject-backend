@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use("/api", dataRouter)
+app.use("/api", dataRouter);
 
 app.listen(4001, async () => {
     console.log("Server is running on port 4001");
@@ -18,6 +18,6 @@ app.listen(4001, async () => {
         console.log(`MongoDB connected: ${conn.connection.host}`);
     } catch (error) {
         console.log(`Error: ${error.message}`);
-        
+
     }
 });
